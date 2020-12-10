@@ -1,38 +1,111 @@
 .App {
-  text-align: center;
+  color: black;
+  font-family: 'Sumana', serif;
+  margin: 0;
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loading{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+}
+svg {
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+nav{
+  box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .45);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container-main {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: auto;
+
+}
+
+.match-container{
+  padding: 5%;
+  background: rgba(41, 3, 42, 1.0);
+  background: -webkit-linear-gradient(bottom, rgba(41, 3, 42, 1.0), rgba(52, 13, 7, 1.0));
+  background: -moz-linear-gradient(bottom, rgba(41, 3, 42, 1.0), rgba(52, 13, 7, 1.0));
+  background: linear-gradient(to top, rgba(41, 3, 42, 1.0), rgba(52, 13, 7, 1.0));
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  color: rgb(223, 219, 219);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.40);
+}
+
+.match-result{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  justify-items: center;
+  align-items: center;
+}
+
+.home-team{
+  font-size: 3em;
+}
+
+.away-team{
+  font-size: 3em;
+}
+
+.home-score, .away-score, .dash {
+  font-size: 3em;
+}
+
+.match-header h3{
+  color:grey;
+  display: block;
+  font-size: .8em;
+  margin-bottom: 25px;
+}
+
+.footer {
+  color: grey;
+}
+
+.match-result img{
+  height: 60px;
+}
+
+@media only screen and (max-width: 866px){
+  .home-team{
+    grid-column: 1;
+    font-size: 1em;
   }
-  to {
-    transform: rotate(360deg);
+  #homeTeamIcon {
+    grid-column: 1;
+  }
+  .away-team{
+    grid-column: 3;
+    font-size: 1em;
+  }
+  #awayTeamIcon{
+    grid-column: 3;
+  }
+  
+  .home-score, .away-score, .dash {
+    font-size: 1em;
+    grid-column: 2;
+  }
+
+  .match-result{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: auto;
   }
 }
